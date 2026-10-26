@@ -31,7 +31,7 @@ The observed FPR was below the nominal 5% level. This suggests conservative beha
 
 **Why I revised the prompt:**
 
-I revised the prompt to require a direct comparison between naive repeated testing and the always-valid procedure, along with explicit reporting of the empirical FPR, Monte Carlo standard error, confidence interval, and power under a nonzero effect. This makes the implementation easier to verify.
+I revised the prompt because Version 1 treated an empirical false positive rate that is not close to 5% as a possible indication of an error, without distinguishing between a test's theoretical Type I error guarantee and finite-simulation variability. Version 2 explicitly requests a comparison with naive repeated testing, a reproducible null simulation with uncertainty estimates, and a power check under a nonzero effect. These additions make the procedure easier to evaluate rather than judging it solely by whether the observed false positive rate is close to 5%.
 
 **Prompt:**
 
