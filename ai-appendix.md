@@ -27,30 +27,10 @@ Paste the complete first AI response here, including the original explanation an
 
 The observed FPR was below the nominal 5% level. This suggests conservative behavior in this simulation, but it does not by itself prove that the implementation is correct or incorrect.
 
-## Version 2 — Revised Prompt
 
-**Why I revised the prompt:**
 
-I revised the prompt because Version 1 treated an empirical false positive rate that is not close to 5% as a possible indication of an error, without distinguishing between a test's theoretical Type I error guarantee and finite-simulation variability. Version 2 explicitly requests a comparison with naive repeated testing, a reproducible null simulation with uncertainty estimates, and a power check under a nonzero effect. These additions make the procedure easier to evaluate rather than judging it solely by whether the observed false positive rate is close to 5%.
-
-**Prompt:**
-
-Act as an experimentation platform engineer who has implemented sequential testing in production.
-
-Implement an always-valid sequential test using an mSPRT or alpha-spending boundary, using NumPy and SciPy only.
-
-Please provide a reproducible verification script that:
-
-1. Simulates 1,000 independent pure-null streams using a fixed random seed.
-2. Reports the empirical false positive rate, Monte Carlo standard error, and a 95% confidence interval.
-3. Compares naive repeated two-sided 5% z-tests with the always-valid test at multiple stream lengths.
-4. Evaluates power under a nonzero true effect.
-5. Explains the statistical assumptions and investigates unexpected results.
 
 **Complete AI Response:**
 
 Paste the complete second AI response here, including the code, explanations, and actual output.
 
-## Summary of Revisions
-
-The second prompt adds explicit verification requirements and a comparison with naive repeated testing. The goal is to check not only whether the code runs, but also whether its statistical behavior matches the intended error-rate guarantee.
