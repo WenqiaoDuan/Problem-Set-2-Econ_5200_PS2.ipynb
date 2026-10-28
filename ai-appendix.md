@@ -2,7 +2,7 @@
 
 *Model and date:* 
 
-I used ChatGPT with GPT-6 Luna to find the answers。
+I used ChatGPT with ChatGPT (GPT-6)to find the answers。
 
 *Version 1 prompt:*
 
@@ -116,5 +116,6 @@ Using 1,000 pure-null streams with 500 observations per stream and a fixed rando
 ## 5. Interpretation
 
 The observed false positive rate was below the nominal 5% level. This suggests conservative behavior in this simulation, but it does not by itself prove that the implementation is correct or incorrect. Further validation is needed to confirm the test's error control under the null hypothesis.
+
 
 
